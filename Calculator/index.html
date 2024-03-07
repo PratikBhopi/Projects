@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #efefef;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            color: #444;
+            background: transparent;
+            
+            padding: 40px 20px;
+            border-radius: 10px;
+            
+            box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+                        -6px -6px 10px rgba(255, 255, 255, 0.559),
+                         6px  6px  8px rgba(255, 255, 255, 0.07),
+                         6px  6px  10px rgba(0, 0, 0, 0.15),
+                         6px  6px  10px rgba(159, 159, 159, 0.15) inset
+                        ;
+        }
+        .numberpad{
+            /* border-top: 1px solid rgba(100, 100, 100, 0.315); */
+            display: grid;
+            grid-template-columns: repeat(4,60px);
+            grid-template-rows: repeat(5,60px);
+            gap: 15px;
+            padding-top: 15px;
+            
+        }
+        .numberpad button{
+            font-size: 17px;
+            font-weight: 700;
+            border-radius: 10px;
+            border: none;
+            box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+                        -6px -6px 10px rgba(255, 255, 255, 0.559),
+                         6px  6px  8px rgba(255, 255, 255, 0.07),
+                         6px  6px  10px rgba(0, 0, 0, 0.15);
+            
+        }
+
+        .numberpad button:active{
+            box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7) inset,
+                        -6px -6px 10px rgba(255, 255, 255, 0.559),
+                         6px  6px  8px rgba(255, 255, 255, 0.07) inset,
+                         6px  6px  10px rgba(0, 0, 0, 0.15),
+                         6px  6px  15px rgba(159, 159, 159, 0.15) inset
+                        ;
+        }
+
+        .input{
+            /* text-align: end; */
+            /* padding: 2px; */
+            border-radius: 10px;
+            box-shadow: -6px -6px 14px rgba(255, 255, 255, 0.7),
+                        -6px -6px 10px rgba(255, 255, 255, 0.559),
+                         6px  6px  8px rgba(255, 255, 255, 0.07),
+                         6px  6px  10px rgba(0, 0, 0, 0.15),
+                         6px  6px  10px rgba(159, 159, 159, 0.15) inset
+                        ;
+            width: 100%;
+            padding-bottom: 5px;
+        }
+        .input input{
+            /* margin: 3px; */
+            width: 95%;
+            height: 60px;
+            border: none;
+            outline: none;
+            font-size: 22px;
+            text-align: end;
+            background: transparent;
+
+        }
+       
+        #numequal{
+        width: 135px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" id="display" name="result" value="" placeholder="0">
+        </div>
+        <div class="numberpad">
+            <button id="clear" value="AC" onclick="display.value=''">AC</button>
+            <button id="delete" value="DE">DE</button>
+            <button id="num-1" value="." onclick="display.value +='.' ">.</button>
+            <button id="num-1" value="/" onclick="display.value +='/'">/</button>
+            <button id="num-1" value="7" onclick="display.value +='7'">7</button>
+            <button id="num-1" value="8" onclick="display.value +='8'">8</button>
+            <button id="num-1" value="9" onclick="display.value +='9'">9</button>
+            <button id="num-1" value="*" onclick="display.value +='*'">*</button>
+
+            <button id="num-1" value="4" onclick="display.value +='4'">4</button>
+            <button id="num-1" value="5" onclick="display.value +='5'">5</button>
+            <button id="num-1" value="6" onclick="display.value +='6'">6</button>
+            <button id="num-1" value="-" onclick="display.value +='-'">-</button>
+            <button id="num-1" value="1" onclick="display.value +='1' ">1</button>
+            <button id="num-1" value="2" onclick="display.value +='2'">2</button>
+            <button id="num-1" value="3" onclick="display.value +='3'">3</button>
+            <button id="num-1" value="+" onclick="display.value +='+'">+</button>
+            <button id="num-1" value="00" onclick="display.value +='00'">00</button>
+            <button id="num-1" value="0" onclick="display.value +='0'">0</button>
+            <button id="numequal" value="=" >=</button>
+        </div>
+
+
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

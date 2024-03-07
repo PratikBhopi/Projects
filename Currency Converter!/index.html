@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter:</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        *{
+            margin: 0;
+            padding: 5px 0;
+        }
+        body{
+            background-color: rgba(170, 154, 93, 0.651);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container{
+            background-color: rgb(239, 239, 239);
+            padding: 20px 0 55px 0;
+            border-radius: 1rem;
+            width: 80vw;
+            /* height: 50vh; */
+            
+            
+        }
+        .container h2{
+            text-align: center;
+            padding-bottom: 5px;
+        }
+         
+        form{
+            margin: 10px ;
+            
+        }
+        form input{
+            text-indent: 5%;
+            border-radius: 5px;
+        }
+        form select,button,input{
+            width: 100%;
+            border: none;
+            outline: none;
+            height: 30px;
+            /* height: 100%; */
+        }
+        
+        .result{
+            width: 100%;
+            margin: 4px 0;
+            font-size: 17px;
+        }
+        .dropdown{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 7px 0;
+        }
+        .select-container img{
+            max-width: 2rem;
+        }
+        .select-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            border: 1px solid #222;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+        #exchange{
+            height: 40px;
+            border: 1px solid #222;
+            border-radius: 4px;
+            background-color: #af4d98;
+            color: aliceblue;
+            font-weight: 600;
+            margin: 30px 0;
+            font-size: 15px;
+            
+        }
+        #exchange:active{
+            background-color: #b6549fe9;
+            font-size: 14px;
+
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <form>
+            <label for="in-amount">Enter Amount:</label>
+            <input id="in-amount" type="text" value="100">
+        <div class="dropdown">
+            <div class="from">
+                <p>From</p>
+                <div class="select-container">
+                    <img src="https://flagsapi.com/US/shiny/64.png" alt="">
+                    
+                    <select name="from" class="select1"></select>
+                </div>
+            </div>
+            <i class='bx bx-transfer' style='color:#36c41a;font-size: 30px; transform: translateY(10px);'  ></i>
+            <div class="to">
+                <p>To</p>
+                <div class="select-container">
+                    <img src="https://flagsapi.com/IN/shiny/64.png" alt="">
+                    <select name="to" class="select2"></select>
+                </div>
+            </div>
+        </div>
+        <p id="exchange-rates"></p>
+        <div class="result"></div>
+        <button id="exchange">Get Exchanged Rates</button>
+        </form>
+    </div>
+    <script src="codes.js"></script>
+    <script src="currency.js"></script>
+    
+    
+</body>
+</html>
