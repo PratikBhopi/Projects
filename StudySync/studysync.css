@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;900&display=swap');
+
+:root{
+    --primarycolor:#5a59ec;
+    --buttoncolor:#353636;
+}
+/* ==================header========================= */
+header{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+
+}
+.header-section{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.header-section .icon{
+    font-size: 20px;
+    font-weight: 900;
+}
+.header-section .icon img{
+    scale:1.4;
+}
+ nav ul {
+    display: flex;
+    gap: 10px;
+}
+ nav ul li{
+    list-style: none;
+}
+nav ul li a:hover{
+    color: rgb(44, 44, 147);
+    font-weight: 530;
+    transition: all 0.1s;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #353636e3;
+}
+.header-section button a{
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+}
+.header-section button{
+    padding: 8px 15px;
+    border-radius: 4px;
+    background-color: var(--primarycolor);
+    border: none;
+}
+
+/* =======================Hero Section========================================= */
+main{
+    /* background-color: red; */
+    height: 550px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section{
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.left-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding-left: 10px ;
+    animation: lefttoright ease-out 1s ;
+}
+/* ==============================animatee============================================== */
+@keyframes lefttoright {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+}
+/* ===================================================================== */
+.left-section p{
+    color: rgba(53, 53, 255, 0.818);
+    font-size: 0.9em;
+}
+.left-section h1{
+    font-size: 2.25rem;
+}
+.left-section h4{
+    font-size: 0.9em;
+}
+.right-section img{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 25px;
+
+}
+.btns-section .btn{
+     padding: 8px 28px;
+     font-weight: 550;
+     border: none;
+     border-radius: 5px;
+}
+.btns-section .btn a{
+    text-decoration: none;
+    color: white;
+}
+.btns-section .btn1:hover{
+    /* font-weight: 540; */
+    background-color: #4a4aee;
+    transition: all 0.9s ease;
+}
+.btns-section .btn2:hover{
+    background-color: #2d2d2d;
+    transition: all 0.9s ease;
+
+}
+.btns-section .btn1{
+    background-color: var(--primarycolor);
+
+}
+.btns-section .btn2{
+    background-color: var(--buttoncolor);
+}
+/* ==========================================POPOUP BOX======================================= */
+.popup-in{
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 2px;
+    animation: lefttoright ease-out 1s ;
+    /* background-color: rebeccapurple; */
+
+}
+.popup{
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+    background-color: #edeced;
+    gap: 20px;
+    border: 2px solid #e0dfe0;
+    height: 30px;
+    color: #333131;
+}
+
+/* ===================================RESPONSIVE============================================== */
+@media only screen and (max-width:810px){
+    .header-section{
+        width: 90%;
+    }
+    .header-section nav{
+        display: none;
+    }
+    main{
+        background-color: red;
+        /* max-height: 100vh; */
+        height: 70vh;
+        display: flex;
+        align-items: flex-start;
+        text-align: center;
+        position: relative;
+    }
+    .hero-section {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+    }
+   
+    .hero-section .left-section p{
+        font-size: 14px;
+    }
+    .hero-section .left-section h1{
+        font-size: 40px;
+        line-height: 0.8em;
+
+    }
+    .hero-section .left-section h4{
+        color: #353636;
+        font-size: 0.8rem;
+    }
+    .right-section{
+        margin: 10px 0;
+        height: 30%;
+        position: absolute;
+        bottom: 25%;
+    }
+    
+    .right-section img{
+        /* max-widh: 400px; */
+        width: 300px;
+        height: 300px;
+    }
+}
