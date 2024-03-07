@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
+        body{
+            /* background-color: #101415; */
+            color: #222;
+            font-family: 'Mochiy Pop One', sans-serif;
+
+        }
+        .game{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .game-icons{
+            display: flex;
+            gap: 20px;
+        }
+        .game-icons button{
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            border: none;
+            /* background-color: rgb(68, 65, 65); */
+            
+        }
+        
+        .game-icons button img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50px;
+
+        }
+        .score{
+            margin: 30px 0;
+        }
+        .score {
+           display: flex;
+           gap: 10px;
+           text-align: center;
+        }
+        .result{
+            font-size: 30px;
+            font-weight: 700;
+            /* background-color: #000000; */
+            color: rgb(35, 35, 35);
+            border-radius: 20px;
+            padding: 8px 10px;
+
+        }
+        nav{
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+        }
+        nav button{
+            background: transparent;
+            border: 2px solid aliceblue;
+            border-radius: 15px;
+            font-weight: 700;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="game">
+        <nav>
+            <button id="restart" style="background-color: #222; color: white;">Restart</button>
+            <button id="theme">Dark</button>
+        </nav>
+        <header><h1>Rock Paper Scissors</h1></header>
+        <div class="game-icons">
+            <div class="btn"><button style="outline: 5px solid #0b1623;" id="paper"><img src="paper.png" alt=""></button></div>
+            <div class="btn"><button style="outline: 5px solid #0e1514;" id="rock"><img src="stone.png" alt=""></button></div>
+            <div class="btn"><button style="outline: 5px solid #190b14;" id="scissor"><img src="scissor.png" alt=""></button></div>
+        </div>
+        <div class="score">
+         <div >
+            <h2 id="my-score"></h2>
+            <h3>Your Score</h3>
+         </div>
+         <div >
+            <h2 id="comp-score"></h2>
+            <h3>Computer Score</h3>
+         </div>
+        </div>
+        <div class="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
