@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+            /* background-color: linear-gradient(#93e4c1,#3baea0,#118a7e,#1f6f78); */
+            background-color: #3f7b70;
+        }
+        .game{
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            /* height: 50%; */
+            margin: 20px 0;
+            display: grid;  
+            grid-template-columns: 100px 100px 100px;          
+            grid-template-rows: 100px 100px 100px;          
+            gap: 10px;
+            
+        }
+        header h1{
+            color: #113c4a;
+            color: white;
+            -webkit-text-stroke: 2px  ;
+            -webkit-text-stroke-color: #113c4a;
+            font-family: 'Mochiy Pop One', sans-serif;
+        }
+        .box{
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            height: 100px;
+            width: 100px;
+            border: none;
+            /* border: 2px solid rgba(0, 62, 52, 0.844); */
+            /* color: #dddddd; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 70px;
+            color: #113c4a ;
+        }
+       
+        #game-result{ 
+            padding: 10px 25px;
+            background-color: white;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 800;
+            color: #113c4a;
+        }
+        .btns{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #newgame-btn,#back,#reset-btn{
+            margin: 5px;
+            padding: 10px 25px;
+            border-radius: 10px;
+            background: transparent;
+            color: white;
+            font-weight: 900;
+            font-size: large;
+            font-family: 'Rubik Burned', system-ui;
+        }
+        .game-hide{
+            display: none;
+            
+        }
+        .start{
+            display: flex;
+            flex-direction: column;
+            /* margin: 5px 0; */
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            color: rgb(255, 255, 255);
+
+        }
+        .start #startgame{
+            font-size: larger;
+            padding: 15px 40px;
+            border-radius: 20px;
+            color: aliceblue;
+            border: 2px solid white;
+            background: linear-gradient(#93e4c1,#3baea0,#118a7e,#1f6f78);
+        }
+    </style>
+</head>
+<body>
+<div class="start">
+    <h3 style="font-size: 19px; ">Feeling Bored?</h3>
+    <h3>Let's Play,<b style="font-size: 25px;"> 'Tic-Tac-Toe' </b>!!!!!!</h3>
+    <div>
+    <button id="startgame" style="font-family: 'Rubik Burned', system-ui; font-weight: 900;">Play<i class='bx bxs-right-arrow' style='color:#ffffff' ></i></button>
+    </div>
+</div>
+<div class="game game-hide" >
+    <div id="game-result"></div>
+    <header> <h1>|| Tic Tac Toe ||</h1></header>
+    <div class="container">
+        <button class="box box1"></button>
+        <button class="box box2"></button>
+        <button class="box box3"></button>
+        <button class="box box4"></button>
+        <button class="box box5"></button>
+        <button class="box box6"></button>
+        <button class="box box7"></button>
+        <button class="box box8"></button>
+        <button class="box box9"></button>
+    </div>
+    <div class="btns">
+        <button id="reset-btn">Reset</button>
+        <button id="newgame-btn">New Game</button>
+        <button id="back"><i class='bx bxs-left-arrow' style='color:#ffffff; font-size: 18px;'  ></i>Back</button>
+
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
